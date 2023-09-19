@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <title>Quotegram</title>
+</head>
+
+<body>
+
+    <!-- Full site container/wrapper-->
+
+    <!-- Header -->
+    <header>
+
+        <!-- Github and logo -->
+        <div class="header-left">
+            <a href="https://github.com/szynner"><img src="./images/simba9.png" alt="" width="10%"></a>
+        </div>
+
+        <!-- Title and sub title -->
+        <div class="header-center">
+            <h1>" Quotegram "<span>The Famous Programmer Quote Generator</span></h1>
+        </div>
+
+        <!-- Dark and Light switch -->
+        <div class="header-right">
+            <div>
+                <span class="toggle-label"></span>
+                <label class="dark-mode-switch" id="backgroundColor">
+                    <input type="checkbox">
+                    <span class="dark-mode-slider round"></span>
+                </label>
+            </div>
+        </div>
+
+    </header>
+
+    <!-- Main body -->
+    <main>
+
+        <nav>
+            <div class="first-anchor">
+                <a href="#" class="nav-link" onclick="showSection('section1', this)" class="active">Quote of the day</a>
+            </div>
+            <div class="second-line">
+                <a href="#" class="nav-link" onclick="showSection('section2', this)"> Generator</a>
+                <a href="#" class="nav-link" onclick="showSection('section3', this)">Full  List</a>
+                <a href="#" class="nav-link" onclick="showSection('section4', this)">Documentation</a>
+            </div>
+        </nav>
+
+        <div class="content">
+
+            <!-- First block for daily quote -->
+            <section id="section1" class="show">
+                <div class="quote-container">
+                    <h2>Quote of the day</h2>
+                    <p id="quote-text">...</p>
+                    <p id="quote-author">- Author</p>
+                    <p id="countdown">New quote in: <span id="countdown-time"></span></p>
+                </div>
+            </section>
+
+            <!-- Second block for quote generator -->
+            <section id="section2">
+                <!-- Second quote container with a button -->
+                <div class="quote-container">
+                    <h2>Random quote generator</h2>
+                    <p id="second-quote-text">Click the button to generate a new quote:</p>
+                    <p id="second-author"></p>
+                    <button id="generate-button">Generate Quote</button>
+                </div>
+            </section>
+
+            <!-- Third block for full list of quotes -->
+            <section id="section3">
+                <h2>Full list of quotes</h2>
+                    <!-- Table to display quotes -->
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Quotes</th>
+                                <th>Citation</th>
+                                <th>Author/eur</th>
+                            </tr>
+                        </thead>
+                        <tbody id="quote-table-body"></tbody>
+                    </table>
+            </section>
+
+            <!-- Fourth block for documentation -->
+            <section id="section4">
+                <h2>Documentation of the project</h2>
+                <p>For version 1 and later</p>
+            </section>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+
+        <!-- Footer essentiels -->
+        <p>Quotegram v0.1 19/09/2023-present || Made by: Serge Junior Szynkarski</p>
+
+        <!-- Social icons -->
+        <div>
+            <ul>
+                <li>Github Repo</li>
+                <li><a href="www.linkedin.com/in/serge-junior-szynkarski-18507095">Linkdin</a></li>
+            </ul>
+        </div>
+
+    </footer>
+
+<!-- Scripts used for the project -->
+
+    <script src="./scripts/showsection.js"></script>
+    <script src="./scripts/backgroundSwitch.js"></script>
+    <script src="./scripts/quotes.js"></script>
+    <script src="./scripts/dailyquote.js"></script>
+    <script src="./scripts/tablequotes.js"></script>
+    <script src="./scripts/randomquote.js"></script>
+
+</body>
+</html>
